@@ -1,25 +1,19 @@
 package com.company.kinotime.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name = "category")
+@Entity
 public class Category {
-
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
@@ -35,7 +29,7 @@ public class Category {
     @Column(nullable = false)
     private String nameUz;
 
-    @CreatedDate
+    @CreationTimestamp
     private LocalDateTime create_data;
 
     @UpdateTimestamp

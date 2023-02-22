@@ -1,9 +1,6 @@
 package com.company.kinotime.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jdk.jfr.Enabled;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,6 +27,7 @@ public class Singin {
     private String password;
 
     @Column(nullable = false)
+    @ManyToMany
     private List<Profile>  profile;
     
 }

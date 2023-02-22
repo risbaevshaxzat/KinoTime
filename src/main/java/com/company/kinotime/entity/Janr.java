@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @AllArgsConstructor
@@ -22,8 +23,9 @@ public class Janr {
     @Column(nullable = false)
     private String name;
 
-    @OneToOne
-    private Category category;
+    @ManyToMany
+    @Column(nullable = false)
+    private List<Category>  category;
 
     @CreationTimestamp
     private LocalDateTime creat_data;
