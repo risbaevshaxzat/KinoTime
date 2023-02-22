@@ -1,9 +1,6 @@
 package com.company.kinotime.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,23 +13,22 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name = "category")
-public class Category {
+@Entity
+public class Actors {
 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
+    private UUID id;
 
     @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)
-    private String nameRu;
+    private String surname;
 
     @Column(nullable = false)
-    private String nameEn;
-
-    @Column(nullable = false)
-    private String nameUz;
+    private String image;
 
     @CreatedDate
     private LocalDateTime create_data;

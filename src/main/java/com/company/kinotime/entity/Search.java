@@ -4,16 +4,15 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
 
-import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-public class Janr {
+public class Search {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,10 +21,21 @@ public class Janr {
     @Column(nullable = false)
     private String name;
 
-    @OneToOne
-    private Category category;
+    @Column(nullable = false)
+    private String cuntry;
 
-    @CreationTimestamp
-    private LocalDateTime creat_data;
+    @Column(nullable = false)
+    private String aktroy;
+
+    @Column(nullable = false)
+    private String janir;
+
+    @Column(nullable = false)
+    private String year_of_manufacture;
+
+    @Column(nullable = false)
+    @ManyToMany
+    private List<Product> product_id;
+
 
 }
