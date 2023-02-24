@@ -17,14 +17,13 @@ import java.util.UUID;
 public class Janr {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private UUID id;
 
     @Column(nullable = false)
     private String name;
 
     @ManyToMany
-    @Column(nullable = false)
     private List<Category>  category;
 
     @CreationTimestamp

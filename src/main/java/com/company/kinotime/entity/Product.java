@@ -16,7 +16,7 @@ import java.util.UUID;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private UUID id;
 
     @Column(nullable = false)
@@ -34,7 +34,7 @@ public class Product {
     @Column(nullable = false)
     private String produser;
 
-    @Column(nullable = false)
+
     @OneToOne
     private Actors actors;
 

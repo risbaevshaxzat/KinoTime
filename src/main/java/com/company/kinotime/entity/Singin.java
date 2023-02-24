@@ -11,11 +11,11 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Enabled
+@Entity
 public class Singin {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
 
     @Column(nullable = false)
     private String username;
