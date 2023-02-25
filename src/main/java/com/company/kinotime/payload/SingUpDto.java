@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
-public class SingUp {
+public class SingUpDto {
 
     private Integer id;
 

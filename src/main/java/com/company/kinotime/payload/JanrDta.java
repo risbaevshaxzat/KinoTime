@@ -1,5 +1,6 @@
 package com.company.kinotime.payload;
 
+import com.company.kinotime.entity.Category;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Data
 
-public class Janr {
+public class JanrDta {
 
     private Integer id;
 

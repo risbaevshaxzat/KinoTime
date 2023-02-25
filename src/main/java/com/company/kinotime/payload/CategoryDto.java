@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Data
 
-public class Category {
+public class CategoryDto {
 
 
     private Integer id;

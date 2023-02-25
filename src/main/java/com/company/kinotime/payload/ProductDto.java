@@ -14,7 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Data
 
-public class Product {
+public class ProductDto {
 
 
     private Integer id;

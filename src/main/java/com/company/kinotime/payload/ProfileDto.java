@@ -18,7 +18,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 
-public class Profile  {
+public class ProfileDto  {
 
 
     private Integer id;

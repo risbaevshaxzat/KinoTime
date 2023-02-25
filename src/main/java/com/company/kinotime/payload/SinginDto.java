@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Singin {
+public class SinginDto {
 
     @Column( length = 50)
     private String username;
